@@ -1,7 +1,8 @@
 {
     "require": {
         "php": "^7.2.5",
-        "squizlabs/php_codesniffer": "*"
+        "squizlabs/php_codesniffer": "*",
+        "phpcompatibility/php-compatibility": "*"
     },
     "config": {
         "preferred-install": "dist"

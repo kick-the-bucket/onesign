@@ -3,15 +3,15 @@
     <description>The coding standard for our project.</description>
     <rule ref="PSR2"/>
 
+    <!-- Check for cross-version support for PHP 7.4 and higher. -->
+    <config name="testVersion" value="7.4-"/>
+    <rule ref="./vendor-bin/php_codesniffer/vendor/phpcompatibility/php-compatibility/PHPCompatibility"/>
+    <rule ref="PHPCompatibility.Keywords.ForbiddenNamesAsDeclared.resourceFound">
+        <exclude-pattern>tests/Resource.php</exclude-pattern>
+    </rule>
+
     <file>src</file>
     <file>tests</file>
-
-    <exclude-pattern>bootstrap/cache/*</exclude-pattern>
-    <exclude-pattern>bootstrap/autoload.php</exclude-pattern>
-    <exclude-pattern>*/migrations/*</exclude-pattern>
-    <exclude-pattern>*/seeds/*</exclude-pattern>
-    <exclude-pattern>*.blade.php</exclude-pattern>
-    <exclude-pattern>*.js</exclude-pattern>
 
     <!-- Show progression -->
     <arg value="p"/>
